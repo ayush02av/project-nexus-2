@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const collection = require("./config");
+const feedbackcollection = require("./config1");
 
 const app = express();
 app.use(express.json());
@@ -18,6 +19,9 @@ app.get("/", (req, res) => {
 
 app.get("/signup", (req, res) => {
     res.render("signup");
+});
+app.get("/feedback", (req, res) => {
+    res.render("feedback");
 });
 
 app.post("/signup", async (req, res) => {
@@ -59,6 +63,18 @@ app.post("/login", async (req, res) => {
     } catch {
         res.send("wrong details")
     }
+})
+
+app.post("/feedback", async (req, res) => {
+
+    const fdata = {
+        name: req.body.username,
+        feedback: req.body.feedback
+    }
+    const fuserdata = await feedbackcollection.insertMany(fdata);
+    res.render("result");
+    console.log(fuserdata);
+
 })
 
 const port = 5000;

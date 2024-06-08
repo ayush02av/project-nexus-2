@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./images/background.jpg');
+    background-image: url('./images/straw1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,10 +24,11 @@ h2 {
     width: 300px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid;
+    border: 2px solid white;
     border-radius: 5px;
     z-index: 100%;
     margin-top: -150px;
+    color: white;
 }
 
 .form-group {
@@ -39,7 +40,15 @@ h2 {
     width: 100%;
     padding: 8px;
     font-size: 16px;
-    border: 1px solid;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid white;
     border-radius: 3px;
 }
 
@@ -47,11 +56,16 @@ h2 {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: black;
-    color: #fff;
+    background-color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
 }
 
 

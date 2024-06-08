@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Feedback</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <div class="form-container">
-        <h2><u>Login</u></h2>
-        <form action="/login" method="post">
+        <h2><u>FEEDBACK</u></h2>
+        <form action="/feedback" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="username" placeholder="Enter your Name" required autocomplete="off">
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <label for="feedback">Feedback:</label>
+                <textarea type="text" name="feedback" id="feedback" placeholder="Enter you Feedback" required
+                    autocomplete="off" rows="5"></textarea>
             </div>
-            <button type="submit" class="submit-btn">Login</button>
+            <button type="submit" class="submit-btn">Submit</button>
         </form>
-        <p style="font-weight: bold;">Don't have an account? <a style="color: white;" href="/signup">Signup</a></p>
     </div>
 </body>
 
